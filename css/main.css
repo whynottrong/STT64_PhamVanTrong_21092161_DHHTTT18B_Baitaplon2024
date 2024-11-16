@@ -1,0 +1,253 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.maudo{
+  color: red;
+}
+.row-custom{
+    width: 80%;
+}
+.menu-history{
+    display: flex;
+    margin: 0px;
+    padding-left: 0px;
+}
+li{
+    list-style: none;
+    margin-right: 6px;
+}
+li a{
+    text-decoration: none;
+    color: #333;
+}
+.icon-header{
+    margin-top: 0px;
+}
+.menu-top li{
+    padding: 5px 20px 10px 20px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid transparent;
+}
+.menu-top li{
+    transition: transform 0.3s ease; /* Tạo hiệu ứng mượt mà */
+  }
+.menu-top li:hover{
+    border-bottom-color: #333;
+}
+
+.menu-top li:hover a{
+    text-decoration: none;
+}
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slides {
+    display: flex;
+    width: 300%;
+    animation: slide 24s linear infinite; /* Tổng thời gian tăng lên để phù hợp với thời gian dừng */
+  }
+  
+  .slides img {
+    width: 33.333%;
+    flex-shrink: 0;
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    20.833% { transform: translateX(0); }
+    25% { transform: translateX(-33.333%); }
+    45.833% { transform: translateX(-33.333%); }
+    50% { transform: translateX(-66.666%); }
+    70.833% { transform: translateX(-66.666%); }
+    75% { transform: translateX(-100%); }
+    95.833% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+  
+  .menu-top{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+    z-index: 2;
+  }
+  .box-menu-2{
+    display: none;
+    /* opacity: 0; 
+    transition: opacity 0.5s ease-in-out; */
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 100px;
+    top: 42px;
+
+    
+  }
+  li.menu-1{
+    margin: 0px 25px;
+  }
+  li.menu-1:hover .box-menu-2 {
+    display: block;
+    transform: translateY(0);
+  }
+  li.menu-1:hover .box-menu-2:hover { display: block;}
+  .box-item{
+    margin-top: 18px;
+    width: 80%;
+    display: flex;
+    background-color: #e8e4e4;
+    justify-content: space-around;
+  }
+  .box-item-menu li{
+    width: 240px;
+  }
+.thuonghieu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.thuonghieu h1{
+    color: #333;
+    padding: 10px 0px;
+}
+.brand{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.tenthuonghieu{
+    display: flex;
+    gap: 20px;
+}
+
+img {
+    transition: transform 0.3s ease; /* Tạo hiệu ứng mượt mà */
+  }
+  
+  .tenthuonghieu a img:hover {
+    transform: scale(1.1); /* Phóng to ảnh lên 1.2 lần khi hover */
+  }
+  .donghohot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    background-color: #4094dc ;
+  }
+  .tieude{
+    width: 100%;
+    height: 100px;
+    background-image: url(../img/z6016687758360_f958f0761c7ab6a3ad96d2f4d33ce0bd.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat  ;
+    background-position: center;
+  }
+  .banchay{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .product-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+    border: 2px rgba(181, 192, 209, 0.637) solid;
+    width: 250px;
+    font-size: 18px; 
+    background-color: aliceblue; 
+  }
+
+  .header_product{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product-item:hover{
+    box-shadow: 0 0 10px blue;
+    transform: scale(1.1);
+  }
+  .product-item{
+    transition: transform 0.3s ease; /* Tạo hiệu ứng mượt mà */
+  }
+
+  .donghobanchay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
+  .row7{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .tintuc{
+    width: 70%;
+    display: flex;
+  }
+  .tintuc-baiviet{
+    flex: 1;
+    display: flex;
+    padding: 3px;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .list-baiviet{
+    display: flex;
+  }
+  .list-baiviet:hover{
+    background-color: #e8e4e4;
+  }
+  .new-tintuc{
+    flex: 6;
+  }
+  .anh-tintuc{
+    flex: 4;
+  }
+  .tintuc-video{
+    flex: 1;
+  }
+  .new-tintuc a{
+    color: black;
+    font-weight: bold;
+  }
+  
+
+  .row8{
+    display: flex;
+    justify-content: center;
+    background-color: #e8e4e4 ;
+  }
+  .tranggioithieu{
+    margin-top: 40px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .item-gioithieu{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  .item-gioithieu li{
+    color: black;
+    font-weight: bold;
+  }
+  .item-gioithieu li a{
+    color: #333;
+    font-weight: normal;
+  }
+  .item-gioithieu img{
+    width: 80px;
+  }

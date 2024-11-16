@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Infor</h1>
+    <table width=200 border="1">
+        <tr>
+            <th colspan="2">THÔNG TIN ĐĂNG NHẬP</th>
+        </tr>
+
+        <tr>
+            <td>Username</td>
+            <td id="us">AAAA</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td id="pw">BBBB</td>
+        </tr>
+        
+    </table>
+    <script>
+        document.getElementById("us").innerHTML=localStorage.getItem("us");
+        document.getElementById("pw").innerHTML=localStorage.getItem("pd");  
+    </script>
+</body>
+</html>

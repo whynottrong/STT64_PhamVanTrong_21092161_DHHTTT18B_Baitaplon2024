@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Shopping Cart Example</title>
+    <style>
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Products</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card product" data-name="Tissot" data-price="15600000">
+                    <img src="../img/sanpham/sanpham1.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Tissot</h5>
+                        <p class="card-text">15.600.000</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm các sản phẩm khác tương tự -->
+            <div class="col-md-3">
+                <div class="card product" data-name="G-shock" data-price="7500000">
+                    <img src="../img/sanpham/sp6.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">G-shock</h5>
+                        <p class="card-text">7.500.000</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product" data-name="Gshock" data-price="12300000">
+                    <img src="../img/sanpham/sp5.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Gshock</h5>
+                        <p class="card-text">12.300.000</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product" data-name="Casio" data-price="7800000">
+                    <img src="../img/sanpham/sp5.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Casio</h5>
+                        <p class="card-text">7.800.000</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm sản phẩm khác nếu cần -->
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h1>Products</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card product" data-name="Product 1" data-price="50.000.000">
+                    <img src="../img/sanpham/sp7.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Hublot</h5>
+                        <p class="card-text">50.000.000</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm các sản phẩm khác tương tự -->
+            <div class="col-md-3">
+                <div class="card product" data-name="DW" data-price="12900000">
+                    <img src="../img/sanpham/n3.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">DW</h5>
+                        <p class="card-text">12.900.000</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product" data-name="Orient" data-price="14800000">
+                    <img src="../img/sanpham/longines.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Orient</h5>
+                        <p class="card-text">14.800.000</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product" data-name="Longines" data-price="14600000">
+                    <img src="../img/sanpham/n7.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Longines</h5>
+                        <p class="card-text">14.600.000</p>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm sản phẩm khác nếu cần -->
+        </div>
+    </div>
+
+    <div class="cart">
+        <h4>Shopping Cart</h4>
+        <ul class="list-group" id="cart-items">
+            <li class="list-group-item">Cart is empty</li>
+        </ul>
+        <div class="total">
+            <h5>Total: $<span id="total-price">0.00</span></h5>
+        </div>
+        <button class="btn btn-success" id="checkout">Thanh toán</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let totalPrice = 0;
+
+            $(".add-to-cart").click(function(){
+                let productCard = $(this).closest(".product");
+                let productName = productCard.data("name");
+                let productPrice = parseFloat(productCard.data("price"));
+
+                let cartItem = `<li class="list-group-item">${productName} - $${productPrice.toFixed(2)}</li>`;
+
+                if ($("#cart-items li").length === 1 && $("#cart-items li").text() === "Cart is empty") {
+                    $("#cart-items").html(cartItem);
+                } else {
+                    $("#cart-items").append(cartItem);
+                }
+
+                totalPrice += productPrice;
+                $("#total-price").text(totalPrice.toFixed(2));
+            });
+
+            $("#checkout").click(function(){
+                alert(`Số tiền bạn cần phải trả là: $${totalPrice.toFixed(2)}`);
+                // Reset cart after checkout
+                $("#cart-items").html('<li class="list-group-item">Cart is empty</li>');
+                totalPrice = 0;
+                $("#total-price").text(totalPrice.toFixed(2));
+            });
+        });
+    </script>
+</body>
+</html>

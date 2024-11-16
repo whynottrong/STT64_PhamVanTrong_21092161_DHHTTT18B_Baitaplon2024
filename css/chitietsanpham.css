@@ -1,0 +1,29 @@
+.box-chitiet{
+    margin-top: 30px;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    border: #333 solid 2px;
+    padding: 20px;
+}
+.left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.anh2{
+    display: flex;
+    gap: 4px;
+}
+img.blur {
+     transition: filter 0.3s ease-in-out;
+     filter: blur(3px);
+} 
+img.blur :hover{
+    filter: none;
+    border: 1px solid #333;
+}
+.right{
+    flex: 1;
+}

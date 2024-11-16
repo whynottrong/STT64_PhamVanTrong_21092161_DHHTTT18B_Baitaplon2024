@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang ky</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dangky.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- <script src="../js/main.js"></script> -->
+    <script src="../js/dangky.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid p-0 m-0 ">
+        
+        <ul>
+            <li><a id="dk" href="#">Đăng ký thành viên click vào đây</a></li>
+        </ul>
+        
+        <div class="row">
+            <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="my-modal-title">Đăng ký thành viên accordion</h5>
+                            <button class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group row">
+                                <div class="col-3 sol-sm-3">
+                                    <label for="">Họ và tên:</label>
+                                </div>
+                                <div class="col-sm-6 col-6">
+                                    <input type="text"  class="form-control" name="inputName" id="txtTen" placeholder="Pham Van Trong">
+                                </div>
+                                <div class="col-3 col-sm-3">
+                                    <span id="tbTen">*</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-3 sol-sm-3">
+                                    <label for="">Số điện thoại:</label>
+                                </div>
+                                <div class="col-sm-6 col-6">
+                                    <input type="text"  class="form-control" name="inputName" id="txtSdt" placeholder="123456789">
+                                </div>
+                                <div class="col-3 col-sm-3">
+                                    <span id="tbSdt">*</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-3 sol-sm-3">
+                                    <label for="">Địa chỉ email:</label>
+                                </div>
+                                <div class="col-sm-6 col-6">
+                                    <input type="text"  class="form-control" name="inputName" id="txtEmail" placeholder="abc1@gmai.com">
+                                </div>
+                                <div class="col-3 col-sm-3">
+                                    <span id="tbEmail">*</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-3 sol-sm-3">
+                                    <label for="">Mật khẩu:</label>
+                                </div>
+                                <div class="col-sm-6 col-6">
+                                    <input type="text"  class="form-control" name="inputName" id="txtMatkhau" placeholder="abc123456">
+                                </div>
+                                <div class="col-3 col-sm-3">
+                                    <span id="tbMatkhau">*</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <button id="dangky" type="button">Đăng ký</button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            Footer
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+                <div class="bangdanhsach">
+                    <table class="col table-bordered table-hover table-primary" id="danhsach">
+                        <tr class="">
+                            <th scope="col">STT</th>
+                            <th scope="col">Số điện thoại</th>
+                            <th scope="col">Họ tên</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                        <tr>
+                            <tr>
+                                <td scope="col">1</td>
+                                <td scope="col">0337393920</td>
+                                <td scope="col">Văn Trông</td>
+                                <td scope="col">phamvantrong401@gmail.com</td>
+                            </tr>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+        <div class="row8 row">
+            <div class="tranggioithieu">
+                <ul class="item-gioithieu">
+                    <li>WatchStore</li>
+                    <li><a href="">Thương hiệu</a></li>
+                    <li><a href="">Chất liệu</a></li>
+                    <li><a href="">Phong cách</a></li>
+                    <li><a href="">Bộ sưu tập</a></li>
+                </ul>
+                <ul class="item-gioithieu">
+                    <li>Giới thiệu</li>
+                    <li><a href="">Điều khoản</a></li>
+                    <li><a href="">Tuyển dụng</a></li>
+                    <li><a href="">Chứng nhận</a></li>
+                    <li><a href=""><img src="../img/bocongthuong.jpg" alt=""></a></li>
+                </ul>
+                <ul class="item-gioithieu">
+                    <li>Chăm sóc khách hàng</li>
+                    <li><a href="">Trung tâm hỗ trợ</a></li>
+                    <li><a href="">Hướng dẫn mua hàng</a></li>
+                    <li><a href="">Đăng ký thành viên</a></li>
+                    <li><a href="">Vị trí cửa hàng</a></li>
+                </ul>
+                <ul class="item-gioithieu">
+                    <li>Theo dõi chúng tôi</li>
+                    <li><a href="">Facebook <i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="">Instagram <i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="">Tiktok Shop <i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+                <ul class="item-gioithieu">
+                    <li>Phương thức thanh toán</li>
+                    <li><a href="">Momo<img src="../img/momo.jpg" alt=""></a></li>
+                    <li><a href="">Visa<img src="../img/visa.jpg" alt=""></a></li>
+                    <li><a href="">Xalopay<img src="../img/zalopay.jpg" alt=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
